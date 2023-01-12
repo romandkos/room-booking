@@ -33,7 +33,7 @@
   "scripts": {
     "vercel": "npx vercel dev",
     "start": "react-scripts start",
-    "build": "BUILD_PATH='../../output/apps/room-booking' react-scripts build",
+    "build": "react-scripts build",
     "release": "npm install && npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
