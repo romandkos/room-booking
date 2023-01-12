@@ -120,7 +120,9 @@ const FloorPlan = (props: PropsFromRedux) => {
   // when sceneId is ready
   useEffect(() => {
     const container = document.getElementById('floorplan')
-    const publishableToken = process.env.REACT_APP_PUBLISHABLE_TOKEN
+    const urlParams = new URLSearchParams(window.location.search)
+    const token = urlParams.get('token')
+    const publishableToken = token || process.env.REACT_APP_PUBLISHABLE_TOKEN
     const fp = new FloorPlanEngine(container, floorPlanStartupSettings)
     fp.loadScene(props.sceneId, { publishableToken }).then(() => {
       const { spaces = [], assets = [] } = fp.resources
