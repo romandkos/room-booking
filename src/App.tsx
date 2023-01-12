@@ -76,10 +76,6 @@ const App = (props: PropsFromRedux) => {
         <div className="subheader">{props.floorName || 'loading...'}</div>
       </div>
       <div className="content">
-        <div style={{ display: 'flex', gap: 5, alignItems: 'center', margin: 'auto' }}>
-          Floor ID
-          <input style={{ width: 310 }} type="text" value={sceneId} onChange={setFloorId} />
-        </div>
         <DaySelect />
         <TimeLine />
         <div style={{ flex: 1 }}>{sceneId && <FloorPlan sceneId={sceneId} />}</div>
