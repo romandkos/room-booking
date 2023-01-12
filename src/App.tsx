@@ -46,7 +46,7 @@ const App = (props: PropsFromRedux) => {
   useEffect(() => {
     if (!token) return
     const urlParams = new URLSearchParams(window.location.search)
-    const scene = urlParams.get('sceneId')
+    const scene = urlParams.get('floorId')
     const demoSceneId = scene || 'b6aa6096-bb77-4872-be25-4886a9e5bf06'
     setSceneId(demoSceneId)
   }, [token])
